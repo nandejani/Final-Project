@@ -1,0 +1,119 @@
+<html>
+<head>
+<style>
+table {
+    font-family: courier;
+    border-collapse: collapse;
+    width: 100%;
+    background-color: black ;
+}
+
+td, th {
+    border: 9px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    color: white;
+}
+  h2 {
+    text-align: center;
+    font-family: courier;
+    color: white;
+    font-size: 50px;
+  }
+  h3 {
+    font-family: courier;
+    color: white;
+    text-align: center;
+  }
+  body, html {
+    height: 100%;
+    margin: 0;
+}
+  body {
+    background-image: url("https://i.imgur.com/9gBRQNH.png");
+     height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  p {
+        font-size: 25px;
+        color: white;
+        font-family: courier;
+  }
+</style>
+</head>
+<body>
+<table>
+  <tr>
+    <th>Album</th>
+    <th>Year Released</th>
+    <th>Number of Songs</th>
+  </tr>
+  <tr>
+    <td>Regional At Best</td>
+      <td>2011</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <td>Vessel</td>
+      <td>2013</td>
+      <td>14</td>
+    </tr>
+    <tr>
+      <td>Blurryface</td>
+      <td>2015</td>
+      <td>13</td>
+    <head>
+    <meta charset="UTF-8">
+    <!-- title -->
+    <title>Twenty One Pilots</title>
+  </head>
+  <body>
+    <header>
+      <h2>Twenty One Pilots</h2>
+    </header>
+    <main>
+			<section id="generator">
+				<header>
+					<h3>Enter your name and we will give you the song of the day by Twenty One Pilots! </h3>
+				</header>
+        <form>
+          <!-- player input for guessing a letter -->
+					<input name="customName" placeholder="enter your name..." type="text" maxlength="25" autofocus id="name" class="txtInput"/>
+          <!-- send guess letter -->
+					<button type="button" id="songsbtn">give song</button>
+				</form>
+        <script>
+          var Songs = [
+            "Stressed Out",
+        "Car Radio",
+        "Ride",
+        "Heathens",
+        "Lane Boy",
+      ]
+      var songsbtn = document.getElementById('songsbtn');
+      songsbtn.addEventListener('click', function(){
+        var songs = Songs[Math.floor(Math.random() *Songs.length)];
+        console.log ('random song ='+ songs);
+     var name = document.getElementById('name').value;
+        console.log('name =' +name);
+
+	var gMessage = name + "'s song is " + songs ;
+        document.getElementById('name').value = '';
+          document.getElementById('name').focus();
+        document.getElementById('songs').innerHTML = 'random song: ' + gMessage;
+}, false);
+        </script>
+      </section>
+      <!-- elements for outputting generated random greeting -->
+      <section id="output">
+				<header>
+					<h3>selection:</h3>
+				</header>
+				<p id="songs"></p>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/Pw-0pbY9JeU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <h2>Top Albums and Info</h2>
+
+</body>
+</html>

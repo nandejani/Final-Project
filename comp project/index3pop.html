@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body, html {
+    height: 100%;
+    margin: 0;
+}
+.bg {
+    /* The image used */
+    background-image: url("http://ak8.picdn.net/shutterstock/videos/17894638/thumb/1.jpg");
+
+    /* Full height */
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.bottom-left {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+  color: white;
+  font-family: courier;
+  font-size: 40px;
+  text-decoration: underline;
+}
+
+/* Top left text */
+.top-left {
+    position: absolute;
+  color: white;
+  font-family: courier;
+  font-size: 40px;
+  text-decoration: underline;
+    top: 40px;
+    left: 40px;
+}
+
+/* Top right text */
+.top-right {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+  color: white;
+    text-decoration: underline ;
+  font-size: 40px;
+  font-family: courier;
+}
+
+/* Bottom right text */
+.bottom-right {
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+  color: white;
+  font-size: 40px;
+  font-family: courier;
+  text-decoration: underline;
+
+}
+
+/* Centered text */
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  text-decoration: underline overline;
+    transform: translate(-50%, -50%);
+  font-size: 65px;
+  font-family: courier;
+  color: black;
+}
+</style>
+</head>
+<body>
+<div class="bg">
+  <a href="swift.html"><div class="top-left"> Taylor Swift </div></a>
+  <a href="beyonce.html"><div class="top-right">beyonce</div></a>
+  <a href="21p.html"><div class="bottom-right">Twenty One Pilots </div></a>
+  <a href="kesha.html"><div class="bottom-left"> Kesha</div></a>
+  <div class="centered">Pop Artists </div>
+  </div>
+</body>
+</html>

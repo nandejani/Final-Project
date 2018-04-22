@@ -1,0 +1,120 @@
+<html>
+<head>
+<style>
+table {
+    font-family: courier;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 9px solid black;
+    text-align: left;
+    padding: 8px;
+    color: black;
+    background-color: white;
+}
+  h2 {
+    text-align: center;
+    font-family: courier;
+    color: black;
+    font-size: 50px;
+  }
+  h3 {
+    font-family: courier;
+    color: white;
+    text-align: center;
+  }
+  body, html {
+    height: 100%;
+    margin: 0;
+}
+  body {
+    background-image: url("https://media.npr.org/assets/img/2014/10/30/taylor-swift-sunglasses_wide-4fba842796dcffeb9f5ba5a1498c20e689e05ad9-s1400-c85.jpg");
+     height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  p {
+        font-size: 25px;
+        color: white;
+        font-family: courier;
+  }
+</style>
+</head>
+<body>
+<table>
+  <tr>
+    <th>Album</th>
+    <th>Year Released</th>
+    <th>Number of Songs</th>
+  </tr>
+  <tr>
+      <td>1998</td>
+      <td>2014</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <td>RED</td>
+      <td>2012</td>
+      <td>15</td>
+    </tr>
+    <tr>
+      <td>Fearless</td>
+      <td>2008</td>
+      <td>13</td>
+    <head>
+    <meta charset="UTF-8">
+    <!-- title -->
+    <title>taylorswift</title>
+  </head>
+  <body>
+    <header>
+      <h2>Taylor Swift</h2>
+    </header>
+    <main>
+			<section id="generator">
+				<header>
+					<h3>Enter your name and we will give you the song of the day by Taylor Swift! </h3>
+				</header>
+        <form>
+          <!-- player input for guessing a letter -->
+					<input name="customName" placeholder="enter your name..." type="text" maxlength="25" autofocus id="name" class="txtInput"/>
+          <!-- send guess letter -->
+					<button type="button" id="songsbtn">give song</button>
+				</form>
+        <script>
+          var Songs = [
+            "Speak Now",
+            "Picture to Burn",
+            "End Game",
+            "Bad Blood",
+            "State of Grace",
+      ]
+      var songsbtn = document.getElementById('songsbtn');
+      songsbtn.addEventListener('click', function(){
+        var songs = Songs[Math.floor(Math.random() *Songs.length)];
+        console.log ('random song ='+ songs);
+     var name = document.getElementById('name').value;
+        console.log('name =' +name);
+
+	var gMessage = name + "'s song is " + songs ;
+        document.getElementById('name').value = '';
+          document.getElementById('name').focus();
+        document.getElementById('songs').innerHTML = 'random song: ' + gMessage;
+}, false);
+        </script>
+      </section>
+      <!-- elements for outputting generated random greeting -->
+      <section id="output">
+				<header>
+					<h3>selection:</h3>
+				</header>
+				<p id="songs"></p>
+                <<iframe width="560" height="315" src="https://www.youtube.com/embed/Jb2stN7kH28" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </section>
+      <h2>Top Albums and Info</h2>
+
+</body>
+</html>

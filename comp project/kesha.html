@@ -1,0 +1,122 @@
+<html>
+<head>
+<style>
+table {
+    font-family: courier;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 9px solid black;
+    text-align: left;
+    padding: 8px;
+    color: Black;
+    background-color: silver;
+}
+
+  h2 {
+    text-align: center;
+    font-family: courier;
+    color: black;
+    font-size: 50px;
+  }
+  h3 {
+    font-family: courier;
+    color: black;
+    text-align: center;
+  }
+  body, html {
+    height: 100%;
+    margin: 0;
+}
+  body {
+    background-image: url("https://i0.wp.com/substreammagazine.com/wp-content/uploads/2017/09/03-Kesha-Press-photo-2017-olivia-bee-billboard-1548.jpg?fit=1548%2C1024&ssl=1");
+     height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  p {
+        font-size: 25px;
+        color: black;
+        font-family: courier;
+  }
+</style>
+</head>
+<body>
+<table>
+  <tr>
+    <th>Album</th>
+    <th>Year Released</th>
+    <th>Number of Songs</th>
+  </tr>
+  <tr>
+    <td>Wonderland</td>
+  <td>2012</td>
+  <td>16</td>
+</tr>
+<tr>
+  <td>Rainbow</td>
+  <td>2017</td>
+  <td>14</td>
+</tr>
+<tr>
+  <td>Animal</td>
+  <td>2010</td>
+  <td>14</td>
+  <head>
+    <head>
+    <meta charset="UTF-8">
+    <!-- title -->
+    <title>Kesha</title>
+  </head>
+  <body>
+    <header>
+      <h2>Kesha</h2>
+    </header>
+    <main>
+			<section id="generator">
+				<header>
+					<h3>Enter your name and we will give you the song of the day by Kesha! </h3>
+				</header>
+        <form>
+          <!-- player input for guessing a letter -->
+					<input name="customName" placeholder="enter your name..." type="text" maxlength="25" autofocus id="name" class="txtInput"/>
+          <!-- send guess letter -->
+					<button type="button" id="songsbtn">give song</button>
+				</form>
+        <script>
+          var Songs = [
+        "Woman",
+        "Die Young",
+        "Tik Tok",
+        "Praying",
+        "Animal",
+      ]
+      var songsbtn = document.getElementById('songsbtn');
+      songsbtn.addEventListener('click', function(){
+        var songs = Songs[Math.floor(Math.random() *Songs.length)];
+        console.log ('random song ='+ songs);
+     var name = document.getElementById('name').value;
+        console.log('name =' +name);
+
+	var gMessage = name + "'s song is " + songs ;
+        document.getElementById('name').value = '';
+          document.getElementById('name').focus();
+        document.getElementById('songs').innerHTML = 'random song: ' + gMessage;
+}, false);
+        </script>
+      </section>
+      <!-- elements for outputting generated random greeting -->
+      <section id="output">
+				<header>
+					<h3>selection:</h3>
+				</header>
+				<p id="songs"></p>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/v-Dur3uXXCQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </section>
+      <h2>Top Albums and Info</h2>
+
+</body>
+</html>

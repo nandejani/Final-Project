@@ -1,0 +1,120 @@
+<html>
+<head>
+<style>
+table {
+    font-family: courier;
+    border-collapse: collapse;
+    width: 100%;
+    background-color: black ;
+}
+
+td, th {
+    border: 9px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    color: white;
+}
+  h2 {
+    text-align: center;
+    font-family: courier;
+    color: white;
+    font-size: 50px;
+  }
+  h3 {
+    font-family: courier;
+    color: white;
+    text-align: center;
+  }
+  body, html {
+    height: 100%;
+    margin: 0;
+}
+  body {
+    background-image: url("https://ksassets.timeincuk.net/wp/uploads/sites/55/2018/02/Beyonce-1.jpg");
+     height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  p {
+        font-size: 25px;
+        color: white;
+        font-family: courier;
+  }
+</style>
+</head>
+<body>
+<table>
+  <tr>
+    <th>Album</th>
+    <th>Year Released</th>
+    <th>Number of Songs</th>
+  </tr>
+  <tr>
+    <td>B'Day</td>
+      <td>2006</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <td>Lemonade</td>
+      <td>2016</td>
+      <td>14</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>2011</td>
+      <td>14</td>
+    <head>
+    <meta charset="UTF-8">
+    <!-- title -->
+    <title>Beyoncé</title>
+  </head>
+  <body>
+    <header>
+      <h2>Beyoncé</h2>
+    </header>
+    <main>
+			<section id="generator">
+				<header>
+					<h3>Enter your name and we will give you the song of the day by Beyoncé! </h3>
+				</header>
+        <form>
+          <!-- player input for guessing a letter -->
+					<input name="customName" placeholder="enter your name..." type="text" maxlength="25" autofocus id="name" class="txtInput"/>
+          <!-- send guess letter -->
+					<button type="button" id="songsbtn">give song</button>
+				</form>
+        <script>
+          var Songs = [
+            "Daddy Lessons",
+        "Halo",
+        "Crazy in Love",
+        "7/11",
+        "Run the World (Girls)",
+      ]
+      var songsbtn = document.getElementById('songsbtn');
+      songsbtn.addEventListener('click', function(){
+        var songs = Songs[Math.floor(Math.random() *Songs.length)];
+        console.log ('random song ='+ songs);
+     var name = document.getElementById('name').value;
+        console.log('name =' +name);
+
+	var gMessage = name + "'s song is " + songs ;
+        document.getElementById('name').value = '';
+          document.getElementById('name').focus();
+        document.getElementById('songs').innerHTML = 'random song: ' + gMessage;
+}, false);
+        </script>
+      </section>
+      <!-- elements for outputting generated random greeting -->
+      <section id="output">
+				<header>
+					<h3>selection:</h3>
+				</header>
+				<p id="songs"></p>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/WDZJPJV__bQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </section>
+      <h2>Top Albums and Info</h2>
+
+</body>
+</html>

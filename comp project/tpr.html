@@ -1,0 +1,131 @@
+<html>
+<head>
+<style>
+table {
+    font-family: courier;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 9px solid white;
+    text-align: left;
+    padding: 8px;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: black;
+}
+  h2 {
+    text-align: center;
+    font-family: courier;
+    color: white;
+    font-size: 50px;
+  }
+  h3 {
+    font-family: courier;
+    color: white;
+    text-align: center;
+  }
+  form {
+    color: white;
+    font-size: 60px;
+    font-family: courier;
+  }
+  p {
+    color: white;
+    font-size: 25px;
+    font-family: courier;
+  }
+  body, html {
+    height: 100%;
+    margin: 0;
+}
+  body {
+    background-image: url("https://i.imgur.com/pRZ48V4.jpg");
+     height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+  }
+</style>
+</head>
+<body>
+<table>
+  <tr>
+    <th>Album</th>
+    <th>Year Released</th>
+    <th>Number of Songs</th>
+  </tr>
+  <tr>
+    <td>Light Me Up</td>
+    <td>2010</td>
+    <td>10</td>
+  </tr>
+  <tr>
+    <td>Going To Hell</td>
+    <td>2014</td>
+    <td>12</td>
+  </tr>
+  <tr>
+    <td>Who You Selling For</td>
+    <td>2016</td>
+    <td>12</td>
+    <head>
+    <meta charset="UTF-8">
+    <!-- title -->
+    <title>The Pretty Reckless</title>
+  </head>
+  <body>
+    <header>
+      <h2>The Pretty Reckless</h2>
+    </header>
+    <main>
+			<section id="generator">
+				<header>
+					<h3>Enter your name and we will give you the song of the day by The Pretty Reckless! </h3>
+				</header>
+				<form>
+          <p>
+          <!-- player input for guessing a letter -->
+					<input name="customName" placeholder="enter your name..." type="text" maxlength="25" autofocus id="name" class="txtInput"=>
+          <!-- send guess letter -->
+					<button type="button" id="songsbtn">give song</button>
+        </p>
+				</form>
+        <script>
+          var Songs = [
+        "Heaven Knows",
+        "Make Me Wanna Die",
+        "Take Me Down",
+        "Kill Me",
+        "Follow Me Down",
+      ]
+      var songsbtn = document.getElementById('songsbtn');
+      songsbtn.addEventListener('click', function(){
+        var songs = Songs[Math.floor(Math.random() *Songs.length)];
+        console.log ('random song ='+ songs);
+     var name = document.getElementById('name').value;
+        console.log('name =' +name);
+
+	var gMessage = name + "'s song is " + songs ;
+        document.getElementById('name').value = '';
+          document.getElementById('name').focus();
+        document.getElementById('songs').innerHTML = 'random song: ' + gMessage;
+}, false);
+        </script>
+      </section>
+      <!-- elements for outputting generated random greeting -->
+      <section id="output">
+				<header>
+					<h3>selection:</h3>
+				</header>
+				<p id="songs"></p>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/rHBxJCq99jA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </section>
+      <h2>Top Albums and Info</h2>
+
+</body>
+</html>
